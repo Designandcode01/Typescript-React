@@ -1,11 +1,15 @@
 import UserProfile from "./components/UserProfile"
 import './App.css'
+import Items from "./components/Items"
 
 
 
 const App = () => {
   return (
     <>
+    <div>
+      <Items name="Stethoscope" price={4999.99} isAvailable={true} categories={["Books", "Instruements", "Furniture", "Electronics"]} />
+    </div>
     <div>App</div>
     <UserProfile 
     name="Michael" 
