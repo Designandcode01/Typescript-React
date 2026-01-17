@@ -8,7 +8,16 @@ const App = () => {
   return (
     <>
     <div>
+      <Items  />
+    </div>
+    <div>
+      <Items isAvailable={true} categories={["Books", "Instruements", "Furniture", "Electronics"]} />
+    </div>
+    <div>
       <Items name="Stethoscope" price={4999.99} isAvailable={true} categories={["Books", "Instruements", "Furniture", "Electronics"]} />
+    </div>
+    <div>
+      <Items name="" price={4999.99} />
     </div>
     <div>App</div>
     <UserProfile 

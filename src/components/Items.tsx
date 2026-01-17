@@ -1,13 +1,13 @@
 export type ItemsProps = {
     
-    name: string;
-    price: number;
-    isAvailable: boolean; // Fixed spelling
-    categories: string[];
+    name?: string;
+    price?: number;
+    isAvailable?: boolean; // Fixed spelling
+    categories?: string[];
 }
 
 
-const Items = ({ name, price, isAvailable, categories }: ItemsProps) => {
+const Items = ({ name="AI", price=0.0000000, isAvailable=true, categories=[] }: ItemsProps) => {
   return (
     <div>
       
@@ -19,6 +19,9 @@ const Items = ({ name, price, isAvailable, categories }: ItemsProps) => {
     </div>
   )
 }
+
+
+
 
 // const Items: React.FC<ItemsProps> = ({ id, name, price, isAvailable }) => {
 //   return (
