@@ -10,7 +10,6 @@ export type ItemsProps = {
 const Items = ({ name="AI", price=0.0000000, isAvailable=true, categories=[] }: ItemsProps) => {
   return (
     <div>
-      
       <h3>{name}</h3>
       <p>Price: ${price}</p>
       <p>Available: {isAvailable ? "Yes" : "No"} </p>
