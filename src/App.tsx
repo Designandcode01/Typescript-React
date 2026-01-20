@@ -1,12 +1,23 @@
 import UserProfile from "./components/UserProfile"
 import './App.css'
 import Items from "./components/Items"
+import Conditionals from "./components/Conditionals"
+import Lists from "./components/Lists"
 
 
 
 const App = () => {
   return (
     <>
+    <div>
+      <Lists id={1} name="Alice Johnson" age={28} email="alice@example.com" isActive={true}  />
+    </div>
+
+    <div>
+      <Conditionals name="John Doe" isOnline={true} hideOffline isPremium={true} isNewMember={true} />
+      <Conditionals name="Dyane" isOnline={false} hideOffline isPremium={true} isNewMember={true} />
+    </div>
+
     <div>
       <Items  />
     </div>
