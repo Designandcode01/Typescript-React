@@ -1,56 +1,30 @@
-import UserProfile from "./components/UserProfile"
 import './App.css'
-import Items from "./components/Items"
-import Conditionals from "./components/Conditionals"
-import Lists from "./components/Lists"
+import { Alert } from './components/Alert'
+import { CustomButton } from './components/events/CustomEvents'
+import FlexboxMindsetShift from './components/FlexboxMindsetShift'
 
 
 
 const App = () => {
   return (
     <>
+    <Alert>
+      "Your changes have been saved"
+    </Alert>
+    {/* events */}
+    <h1>Events Handling</h1>
+    <span>Responding to Events</span>
+    <ul><li>✨Declaring a function that will respond when event is executed</li> 
+       <li>✨Events in react.js must start with on and will be written in camelCase like onClick, onChange, onSubmit </li>
+        
+    </ul>
     <div>
-      <Lists id={1} name="Alice Johnson" age={28} email="alice@example.com" isActive={true}  />
-    </div>
-
-    <div>
-      <Conditionals name="John Doe" isOnline={true} hideOffline isPremium={true} isNewMember={true} />
-      <Conditionals name="Dyane" isOnline={false} hideOffline isPremium={true} isNewMember={true} />
-    </div>
-
-    <div>
-      <Items  />
-    </div>
-    <div>
-      <Items isAvailable={true} categories={["Books", "Instruements", "Furniture", "Electronics"]} />
+    <CustomButton />
     </div>
     <div>
-      <Items name="Stethoscope" price={4999.99} isAvailable={true} categories={["Books", "Instruements", "Furniture", "Electronics"]} />
+    <FlexboxMindsetShift />
     </div>
-    <div>
-      <Items name="" price={4999.99} />
-    </div>
-    <div>App</div>
-    <UserProfile 
-    name="Michael" 
-    age={25}
-    key={1}
     
-            />
-    <div>App</div>
-    <UserProfile 
-    name="James" 
-    age={62}
-    key={1}
-    
-            />
-    <div>App</div>
-    <UserProfile 
-    name="Clark" 
-    age={18}
-    key={1}
-    
-            />
     </>
   )
 }
