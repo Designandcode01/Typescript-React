@@ -2,6 +2,7 @@ import './App.css'
 import { Alert } from './components/Alert'
 import { CustomButton } from './components/events/CustomEvents'
 import FlexboxMindsetShift from './components/FlexboxMindsetShift'
+import GitWorkflowDecisionTree from './components/GitWorkflowDecisionTree'
 
 
 
@@ -23,6 +24,9 @@ const App = () => {
     </div>
     <div>
     <FlexboxMindsetShift />
+    </div>
+    <div className="App">
+      <GitWorkflowDecisionTree />
     </div>
     
     </>
