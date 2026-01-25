@@ -2,7 +2,8 @@ import './App.css'
 import { LoginCard } from './components/data/LoginCard'
 import { UpdatingUI } from './components/data/UpdatingUI'
 import UserComponent from './components/UserComponent'
-import UserProfile from './components/UserProfile'
+import UserProfile from './components/collections/UserProfile'
+import { ToDoList } from './components/collections/TodoList'
 
 
 
@@ -15,6 +16,9 @@ const App = () => {
     <div>
       {/*  name="Clark" age={34} */}
       <UserComponent />
+    </div>
+    <div>
+      <ToDoList />
     </div>
     <div>
       <UserProfile />
