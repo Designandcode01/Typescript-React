@@ -1,56 +1,36 @@
-import UserProfile from "./components/UserProfile"
 import './App.css'
-import Items from "./components/Items"
-import Conditionals from "./components/Conditionals"
-import Lists from "./components/Lists"
+import { LoginCard } from './components/data/LoginCard'
+import { UpdatingUI } from './components/data/UpdatingUI'
+import UserComponent from './components/UserComponent'
+import UserProfile from './components/UserProfile'
 
 
 
 const App = () => {
   return (
     <>
+    <h1> State Variable</h1>
+    
+
     <div>
-      <Lists id={1} name="Alice Johnson" age={28} email="alice@example.com" isActive={true}  />
+      {/*  name="Clark" age={34} */}
+      <UserComponent />
+    </div>
+    <div>
+      <UserProfile />
+
     </div>
 
     <div>
-      <Conditionals name="John Doe" isOnline={true} hideOffline isPremium={true} isNewMember={true} />
-      <Conditionals name="Dyane" isOnline={false} hideOffline isPremium={true} isNewMember={true} />
+      <UpdatingUI />
     </div>
 
     <div>
-      <Items  />
+      <LoginCard />
     </div>
-    <div>
-      <Items isAvailable={true} categories={["Books", "Instruements", "Furniture", "Electronics"]} />
-    </div>
-    <div>
-      <Items name="Stethoscope" price={4999.99} isAvailable={true} categories={["Books", "Instruements", "Furniture", "Electronics"]} />
-    </div>
-    <div>
-      <Items name="" price={4999.99} />
-    </div>
-    <div>App</div>
-    <UserProfile 
-    name="Michael" 
-    age={25}
-    key={1}
+
     
-            />
-    <div>App</div>
-    <UserProfile 
-    name="James" 
-    age={62}
-    key={1}
     
-            />
-    <div>App</div>
-    <UserProfile 
-    name="Clark" 
-    age={18}
-    key={1}
-    
-            />
     </>
   )
 }
@@ -63,79 +43,34 @@ export default App
 
 
 
+// // //////////////////////////////////////////////////
+// import UserProfileDemo from "./UserProfileDemo";
 
-
-
-// // import './App.css'
-// import UserProfile from "./components/UserProfile";
-
-
-// export default function App() {
-//   return (
-//     <>
-//     <div>
-//       <h1>App </h1>
-
-//     <UserProfile 
-//   name="John"      // ✅ From UserProfileProps
-//   age={25}         // ✅ From UserProfileProps  
-//   key="user-123"   // ✅ From IntrinsicAttributes
+// const App = () => {
+//   // Parent component's state (could be passed as props)
+//   const bruceUser = {
+//     name: "Bruce Wayne",
+//     age: 35,
+//     email: "bruce@wayne.com"
+//   };
   
-// />
-
-//     {/* <UserProfile name="Michal" age={20} /> */}
-
-//       </div>
-
-//     </>
-//   )
-// }
-
-
-// <div>
-      // <UserProfile name="Parker" />
-    // </div>
-
-
-
-
-
-
-
-// import { useState } from 'react'
-// import reactLogo from './assets/react.svg'
-// import viteLogo from '/vite.svg'
-// import './App.css'
-// import UserProfile from './components/UserProfile'
-
-// function App() {
-//   const [count, setCount] = useState(0)
-
 //   return (
-//     <>
-    
-//       <div>
-//         <a href="https://vite.dev" target="_blank">
-//           <img src={viteLogo} className="logo" alt="Vite logo" />
-//         </a>
-//         <a href="https://react.dev" target="_blank">
-//           <img src={reactLogo} className="logo react" alt="React logo" />
-//         </a>
-//       </div>
-//       <h1>Vite + React</h1>
-//       <div className="card">
-//         <button onClick={() => setCount((count) => count + 1)}>
-//           count is {count}
-//         </button>
-//         <p>
-//           Edit <code>src/App.tsx</code> and save to test HMR
-//         </p>
-//       </div>
-//       <p className="read-the-docs">
-//         Click on the Vite and React logos to learn more
-//       </p>
-//     </>
-//   )
-// }
+//     <div>
+//       <h1>State vs Props Demo</h1>
+      
+//       {/* Passing data as PROPS */}
+//       <UserProfileDemo 
+//         initialUser={bruceUser}  // PROP
+//         title="User Profile Demo" // Another PROP
+//       />
+      
+//       {/* Another instance with different PROPS */}
+//       <UserProfileDemo 
+//         initialUser={{ name: "Clark Kent", age: 32, email: "clark@dailyplanet.com" }}
+//         title="Second User"
+//       />
+//     </div>
+//   );
+// };
 
-// export default App
+// export default App;
